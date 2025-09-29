@@ -27,7 +27,7 @@ No additional hardware is needed beyond a standard computer. For cost-constraine
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone [https://github.com/yourusername/hackmerlin-agen](https://github.com/Chromaniquej1/hackermerlin_solution.git
+   git clone https://github.com/Chromaniquej1/hackermerlin_solution.git
      ```
 
 2. **Install Dependencies**:
@@ -91,7 +91,6 @@ No additional hardware is needed beyond a standard computer. For cost-constraine
    - **Target Specific Levels**: Modify the loop in `main.py` (e.g., start from a higher level by manually advancing in the browser first).
    - **Add Logging**: Integrate Python's `logging` module in `main.py` to save outputs to a file (e.g., `agent_log.txt`).
 
-
 ## Modules Overview
 The code is structured modularly for maintainability:
 - **`requirements.txt`**: Lists all dependencies (`selenium`, `webdriver-manager`, `openai`, `python-dotenv`).
@@ -102,9 +101,6 @@ The code is structured modularly for maintainability:
 - **`main.py`**: Orchestrates the gameplay loop.
 - **`README.md`**: This file with comprehensive setup and usage instructions.
 - **`Process.pdf`**: Detailed development process, challenges, and answers to specific questions (e.g., improvements for unlimited/cost-constrained environments).
-
-
-For full code details, refer to the source files. Each module includes comments for clarity.
 
 ## Troubleshooting
 - **Selenium Issues**:
@@ -136,29 +132,7 @@ For insights into the development process, unique challenges (e.g., dynamic DOM,
 - **Cost-Constrained Redesign**: Switch to local models (e.g., Phi-3 or Llama-2-7B), hardcode prompts for easy levels, optimize API calls, run on low-end hardware like Raspberry Pi.
 - **Challenges**: Handling async React-based DOM, parsing LLM hallucinations, balancing automation speed with rate limits, and adapting to level-specific safeguards.
 
-To explore xAI's API for alternative LLM integration, visit [x.ai/api](https://x.ai/api).
 
-## Contributing
-- Fork the repo and submit pull requests for improvements (e.g., better prompts, support for higher levels, optimized selectors).
-- Report bugs or suggest features via GitHub Issues.
-- Add test cases or level-specific strategies to improve success rates.
 
-## License
-This project is licensed under the MIT License. Create a `LICENSE` file with standard MIT text if not already present:
-```
-MIT License
 
-Copyright (c) 2025 [Your Name]
 
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-```
-
-## Acknowledgments
-- Built with inspiration from prompt injection challenges like Gandalf and HackMerlin.
-- Thanks to xAI for Grok's guidance in the task simulation.
-- Game source: [github.com/bgalek/hackmerlin.io](https://github.com/bgalek/hackmerlin.io).
-- Prompt injection resources: [promptingguide.ai/risks/injection](https://www.promptingguide.ai/risks/injection).
-- Date: September 29, 2025.
-
-## Contact
-For questions or support, open a GitHub Issue or contact the maintainer (replace with your details). Happy hacking Merlin! 🚀
