@@ -12,13 +12,13 @@ This README includes all setup information, usage instructions, module details, 
 - **LLM-Powered Prompt Generation**: Uses GPT-4o (or configurable model) to craft adaptive injections based on conversation history.
 - **Browser Automation**: Handles real browser interactions for authenticity.
 - **Configurable**: Adjust retries, headless mode, API keys, etc.
-- **GitHub-Ready**: Includes `.gitignore`, requirements, and docs for easy sharing and collaboration.
+
 
 ## Prerequisites
 Before running the agent, ensure you have:
 - **Python**: Version 3.8 or higher (tested on 3.11).
 - **Google Chrome Browser**: Installed on your system (required for Selenium).
-- **OpenAI API Key**: Required for prompt generation. Sign up at [platform.openai.com](https://platform.openai.com) if you don't have one. Note: API usage may incur costs (e.g., ~$0.01 per prompt for GPT-4o).
+- **OpenAI API Key**: Required for prompt generation.
 - **Internet Access**: To load the game site and call the OpenAI API.
 - **Git** (optional): For cloning the repo.
 
@@ -27,20 +27,7 @@ No additional hardware is needed beyond a standard computer. For cost-constraine
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/hackmerlin-agent.git
-   cd hackmerlin-agent
-   ```
-   Replace `yourusername` with your actual GitHub username. If you're creating the repo from scratch:
-   - Create a folder named `hackmerlin-agent`.
-   - Add the provided files (`requirements.txt`, `config.py`, `browser_automation.py`, `prompt_generator.py`, `utils.py`, `main.py`, `README.md`, `doc.md`, `.gitignore`).
-   - Optionally, initialize a Git repo:
-     ```bash
-     cd hackmerlin-agent
-     git init
-     git add .
-     git commit -m "Initial commit"
-     git remote add origin https://github.com/yourusername/hackmerlin-agent.git
-     git push -u origin main
+   git clone [https://github.com/yourusername/hackmerlin-agen](https://github.com/Chromaniquej1/hackermerlin_solution.git
      ```
 
 2. **Install Dependencies**:
@@ -54,8 +41,6 @@ No additional hardware is needed beyond a standard computer. For cost-constraine
    - `openai==1.3.0`: For LLM-based prompt generation.
    - `python-dotenv==1.0.0`: For secure API key management.
 
-   If you encounter issues (e.g., on macOS or Linux), ensure `pip` is up-to-date: `pip install --upgrade pip`.
-
 3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory:
    ```bash
@@ -65,8 +50,6 @@ No additional hardware is needed beyond a standard computer. For cost-constraine
    ```
    OPENAI_API_KEY=sk-your-openai-key-here
    ```
-   This file is ignored by Git for security. Do not commit it!
-
 ## Usage
 ### Running the Agent
 1. **Basic Run**:
@@ -108,18 +91,6 @@ No additional hardware is needed beyond a standard computer. For cost-constraine
    - **Target Specific Levels**: Modify the loop in `main.py` (e.g., start from a higher level by manually advancing in the browser first).
    - **Add Logging**: Integrate Python's `logging` module in `main.py` to save outputs to a file (e.g., `agent_log.txt`).
 
-### Creating the Google Doc
-1. **Copy `doc.md`**:
-   - Open Google Docs and create a new document titled “HackMerlin Agent: Thinking Process & Analysis”.
-   - Copy the content from `doc.md` in the repo and paste it into the Google Doc.
-   - Convert Markdown formatting (e.g., `#` to Heading 1) manually or use a Markdown-to-Docs converter.
-
-2. **Add Materials**:
-   - **GitHub Link**: Replace the placeholder `https://github.com/yourusername/hackmerlin-agent` in `doc.md` with your actual repo URL.
-   - **Video**: Record a run (`python main.py` with `HEADLESS_MODE=False`) using a tool like OBS Studio, upload to YouTube, and embed the link in the doc.
-   - **Screenshots**: Capture console output or browser interactions for key moments (e.g., password extraction) and add to the doc.
-
-3. **Share**: Share the Google Doc via a shareable link or export as a PDF.
 
 ## Modules Overview
 The code is structured modularly for maintainability:
@@ -130,8 +101,8 @@ The code is structured modularly for maintainability:
 - **`utils.py`**: Helper functions, like regex-based password extraction.
 - **`main.py`**: Orchestrates the gameplay loop.
 - **`README.md`**: This file with comprehensive setup and usage instructions.
-- **`doc.md`**: Detailed development process, challenges, and answers to specific questions (e.g., improvements for unlimited/cost-constrained environments).
-- **`.gitignore`**: Ignores sensitive files like `.env` and Python caches.
+- **`Process.pdf`**: Detailed development process, challenges, and answers to specific questions (e.g., improvements for unlimited/cost-constrained environments).
+
 
 For full code details, refer to the source files. Each module includes comments for clarity.
 
