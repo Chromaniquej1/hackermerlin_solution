@@ -20,9 +20,8 @@ Before running the agent, ensure you have:
 - **Google Chrome Browser**: Installed on your system (required for Selenium).
 - **OpenAI API Key**: Required for prompt generation.
 - **Internet Access**: To load the game site and call the OpenAI API.
-- **Git** (optional): For cloning the repo.
+- **Git** For cloning the repo.
 
-No additional hardware is needed beyond a standard computer. For cost-constrained environments, see improvement suggestions in `doc.md`.
 
 ## Installation
 1. **Clone the Repository**:
