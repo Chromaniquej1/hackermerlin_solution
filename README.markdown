@@ -101,29 +101,6 @@ The code is structured modularly for maintainability:
 - **`README.md`**: This file with comprehensive setup and usage instructions.
 - **`Process.pdf`**: Detailed development process, challenges, and answers to specific questions (e.g., improvements for unlimited/cost-constrained environments).
 
-## Troubleshooting
-- **Selenium Issues**:
-  - **"WebDriver not found"**: Ensure Chrome is installed; `webdriver-manager` should auto-download ChromeDriver. Verify with `chromedriver --version`.
-  - **"Element not clickable/Timeout"**: The site's DOM may change. Inspect the page (right-click > Inspect in Chrome) and update selectors in `browser_automation.py` (e.g., `input_selector` or `response_selector`).
-  - **Slow performance**: Increase `time.sleep()` values or `WebDriverWait` timeout in `browser_automation.py` (e.g., from 15 to 30 seconds).
-
-- **OpenAI API Errors**:
-  - **"Invalid key"**: Double-check `.env` file and ensure `OPENAI_API_KEY` is correct.
-  - **"Rate limit exceeded"**: Add delays (e.g., `time.sleep(5)` in `browser_automation.py`) or switch to a cheaper model like `gpt-3.5-turbo`.
-  - **"No credits"**: Top up your OpenAI account at [platform.openai.com](https://platform.openai.com).
-
-- **Game-Specific Problems**:
-  - **Password not extracted**: Update regex patterns in `utils.py` if password formats change (e.g., new encoding schemes).
-  - **Site blocks automation**: The game may detect rapid requests (e.g., CAPTCHAs). Add human-like delays (`time.sleep(10)`) or use proxies (advanced).
-  - **Low success on higher levels**: Levels 4+ have stronger safeguards. Experiment with the system prompt in `prompt_generator.py` (e.g., incorporate DAN-style jailbreaks or level-specific tactics from walkthroughs).
-
-- **General**:
-  - Use a virtual environment to avoid conflicts: `python -m venv venv; source venv/bin/activate` (Unix) or `venv\Scripts\activate` (Windows).
-  - If dependencies fail: Try `pip install --no-cache-dir -r requirements.txt`.
-  - For macOS/Linux: Ensure X11 or display servers are set up for headless mode (e.g., `xvfb-run python main.py` on Linux).
-  - Check the game's source repo ([github.com/bgalek/hackmerlin.io](https://github.com/bgalek/hackmerlin.io)) for updates that may affect selectors or behavior.
-
-If issues persist, open an issue in this repo or consult public resources (e.g., walkthroughs, prompt injection guides).
 
 ## Development & Improvements
 For insights into the development process, unique challenges (e.g., dynamic DOM, non-deterministic AI responses, ethical considerations), and ideas for enhancements, see `doc.md`. Key highlights:
